@@ -1,0 +1,42 @@
+{
+  "name": "openai_response_to_gemini_request_reasoning_go_golden",
+  "kind": "request",
+  "from": "openai-response",
+  "to": "gemini",
+  "model": "gemini-3.5-flash",
+  "compare_go": true,
+  "input": {
+    "input": [
+      {
+        "type": "reasoning",
+        "encrypted_content": "gemini#EjQKMgEMOdbHO0Gd+c9Mxk4ELwPGbpCEcp2mFfYYLix2UVtBH3fL8GECc4+JITVnHF4qZDsA",
+        "summary": [
+          {
+            "type": "summary_text",
+            "text": "internal reasoning"
+          }
+        ]
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "visible answer"
+          }
+        ]
+      },
+      {
+        "type": "message",
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "continue"
+          }
+        ]
+      }
+    ]
+  }
+}

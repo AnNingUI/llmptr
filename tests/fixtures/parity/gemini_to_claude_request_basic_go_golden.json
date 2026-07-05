@@ -1,0 +1,27 @@
+{
+  "name": "gemini_to_claude_request_basic_go_golden",
+  "kind": "request",
+  "from": "gemini",
+  "to": "claude",
+  "model": "claude-sonnet-4",
+  "stream": true,
+  "compare_go": true,
+  "input": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Hello"
+          }
+        ]
+      }
+    ],
+    "generationConfig": {
+      "maxOutputTokens": 4096,
+      "temperature": 0.2,
+      "topP": 0.9,
+      "stopSequences": ["END"]
+    }
+  }
+}

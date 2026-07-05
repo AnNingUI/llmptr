@@ -1,0 +1,36 @@
+{
+  "name": "claude_to_openai_response_response_stream_tool_namespace_go_golden",
+  "kind": "response_stream",
+  "from": "claude",
+  "to": "openai-response",
+  "model": "claude-test",
+  "compare_go": true,
+  "input": null,
+  "original_request": {
+    "model": "gpt-test",
+    "tools": [
+      {
+        "type": "namespace",
+        "name": "mcp__node_repl",
+        "tools": [
+          {
+            "type": "function",
+            "name": "js",
+            "parameters": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "translated_request": {},
+  "inputs": [
+    "data: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_resp_tool\",\"usage\":{\"input_tokens\":1,\"output_tokens\":0}}}",
+    "data: {\"type\":\"content_block_start\",\"index\":1,\"content_block\":{\"type\":\"tool_use\",\"id\":\"call_abc\",\"name\":\"mcp__node_repl__js\",\"input\":{}}}",
+    "data: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"code\\\":\\\"nodeRepl.write('hello')\\\"}\"}}",
+    "data: {\"type\":\"content_block_stop\",\"index\":1}",
+    "data: {\"type\":\"message_stop\"}"
+  ]
+}

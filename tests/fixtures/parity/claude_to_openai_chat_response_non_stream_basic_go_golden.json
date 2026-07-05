@@ -1,0 +1,34 @@
+{
+  "name": "claude_to_openai_chat_response_non_stream_basic_go_golden",
+  "kind": "response_non_stream",
+  "from": "openai",
+  "to": "claude",
+  "model": "gpt-4.1",
+  "compare_go": true,
+  "original_request": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello"
+      }
+    ]
+  },
+  "translated_request": {},
+  "input": {
+    "id": "chatcmpl-basic",
+    "model": "gpt-4.1",
+    "choices": [
+      {
+        "message": {
+          "role": "assistant",
+          "content": "Hello back"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 10,
+      "completion_tokens": 3
+    }
+  }
+}

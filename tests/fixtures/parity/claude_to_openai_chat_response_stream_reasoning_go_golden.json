@@ -1,0 +1,24 @@
+{
+  "name": "claude_to_openai_chat_response_stream_reasoning_go_golden",
+  "kind": "response_stream",
+  "from": "openai",
+  "to": "claude",
+  "model": "gpt-4.1",
+  "compare_go": true,
+  "input": null,
+  "original_request": {
+    "stream": true,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Think"
+      }
+    ]
+  },
+  "translated_request": {},
+  "inputs": [
+    "data: {\"id\":\"chatcmpl-stream-reason\",\"model\":\"gpt-4.1\",\"created\":123,\"choices\":[{\"index\":0,\"delta\":{\"reasoning_content\":\"hidden\"},\"finish_reason\":null}]}",
+    "data: {\"id\":\"chatcmpl-stream-reason\",\"model\":\"gpt-4.1\",\"created\":123,\"choices\":[{\"index\":0,\"delta\":{\"content\":\"answer\"},\"finish_reason\":null}]}",
+    "data: {\"id\":\"chatcmpl-stream-reason\",\"model\":\"gpt-4.1\",\"created\":123,\"choices\":[{\"index\":0,\"delta\":{},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":10,\"completion_tokens\":5}}"
+  ]
+}

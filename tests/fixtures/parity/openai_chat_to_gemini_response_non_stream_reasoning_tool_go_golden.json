@@ -1,0 +1,45 @@
+{
+  "name": "openai_chat_to_gemini_response_non_stream_reasoning_tool_go_golden",
+  "kind": "response_non_stream",
+  "from": "openai",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {
+    "model": "gpt-test",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "reasoning_content": [
+            {
+              "text": "Need weather."
+            },
+            "Call tool."
+          ],
+          "content": "Checking.",
+          "tool_calls": [
+            {
+              "id": "call_1",
+              "type": "function",
+              "function": {
+                "name": "get_weather",
+                "arguments": "{\"city\": Beijing, \"unit\": celsius}"
+              }
+            }
+          ]
+        },
+        "finish_reason": "tool_calls"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 10,
+      "completion_tokens": 7,
+      "total_tokens": 17,
+      "completion_tokens_details": {
+        "reasoning_tokens": 4
+      }
+    }
+  }
+}

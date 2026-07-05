@@ -1,0 +1,19 @@
+{
+  "name": "openai_chat_to_openai_chat_request_go_golden",
+  "kind": "request",
+  "from": "openai",
+  "to": "openai",
+  "model": "gpt-4",
+  "stream": false,
+  "compare_go": true,
+  "input": {
+    "model": "gpt-4",
+    "stream": false,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi"
+      }
+    ]
+  }
+}

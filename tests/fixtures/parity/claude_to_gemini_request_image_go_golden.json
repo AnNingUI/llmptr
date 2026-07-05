@@ -1,0 +1,29 @@
+{
+  "name": "claude_to_gemini_request_image_go_golden",
+  "kind": "request",
+  "from": "claude",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "describe this image"
+          },
+          {
+            "type": "image",
+            "source": {
+              "type": "base64",
+              "media_type": "image/png",
+              "data": "aGVsbG8="
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

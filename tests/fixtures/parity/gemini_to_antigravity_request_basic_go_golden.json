@@ -1,0 +1,1 @@
+{"name":"gemini_to_antigravity_request_basic_go_golden","kind":"request","from":"gemini","to":"antigravity","model":"gemini-2.5-flash","stream":true,"compare_go":true,"input":{"contents":[{"role":"user","parts":[{"text":"Hello"}]}],"generationConfig":{}}}

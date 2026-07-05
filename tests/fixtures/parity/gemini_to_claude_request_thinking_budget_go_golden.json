@@ -1,0 +1,25 @@
+{
+  "name": "gemini_to_claude_request_thinking_budget_go_golden",
+  "kind": "request",
+  "from": "gemini",
+  "to": "claude",
+  "model": "claude-sonnet-4",
+  "compare_go": true,
+  "input": {
+    "generationConfig": {
+      "thinkingConfig": {
+        "thinkingBudget": 1024
+      }
+    },
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Think"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "openai_response_to_claude_request_multimodal_go_golden",
+  "kind": "request",
+  "from": "openai-response",
+  "to": "claude",
+  "model": "claude-test",
+  "stream": false,
+  "compare_go": true,
+  "input": {
+    "model": "gpt-client",
+    "input": [
+      {
+        "type": "message",
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "Inspect these files"
+          },
+          {
+            "type": "input_image",
+            "image_url": "data:image/png;base64,aGVsbG8="
+          },
+          {
+            "type": "input_image",
+            "image_url": "https://example.com/image.png"
+          },
+          {
+            "type": "input_file",
+            "file_data": "data:application/pdf;base64,JVBERi0x"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "claude_to_openai_chat_response_non_stream_tool_go_golden",
+  "kind": "response_non_stream",
+  "from": "openai",
+  "to": "claude",
+  "model": "gpt-4.1",
+  "compare_go": true,
+  "original_request": {
+    "tools": [
+      {
+        "name": "get_weather",
+        "input_schema": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "Weather?"
+      }
+    ]
+  },
+  "translated_request": {},
+  "input": {
+    "id": "chatcmpl-tool",
+    "model": "gpt-4.1",
+    "choices": [
+      {
+        "message": {
+          "role": "assistant",
+          "content": "",
+          "tool_calls": [
+            {
+              "id": "call_weather",
+              "type": "function",
+              "function": {
+                "name": "get_weather",
+                "arguments": "{\"city\":\"Tokyo\"}"
+              }
+            }
+          ]
+        },
+        "finish_reason": "tool_calls"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 10,
+      "completion_tokens": 2,
+      "prompt_tokens_details": {
+        "cached_tokens": 4
+      }
+    }
+  }
+}

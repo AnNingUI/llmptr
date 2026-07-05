@@ -1,0 +1,1 @@
+{"name":"claude_to_antigravity_request_basic_go_golden","kind":"request","from":"claude","to":"antigravity","model":"gemini-2.5-flash","stream":true,"compare_go":true,"input":{"model":"claude-sonnet-4-20250514","max_tokens":4096,"messages":[{"role":"user","content":"Hello"}],"stream":true}}

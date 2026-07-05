@@ -1,0 +1,25 @@
+{
+  "name": "claude_to_openai_response_response_stream_reasoning_go_golden",
+  "kind": "response_stream",
+  "from": "claude",
+  "to": "openai-response",
+  "model": "claude-test",
+  "compare_go": true,
+  "input": null,
+  "original_request": {
+    "model": "gpt-test",
+    "reasoning": {
+      "effort": "medium"
+    }
+  },
+  "translated_request": {},
+  "inputs": [
+    "data: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_resp_reasoning\",\"usage\":{\"input_tokens\":1,\"output_tokens\":0}}}",
+    "data: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"thinking\",\"thinking\":\"\"}}",
+    "data: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"internal \"}}",
+    "data: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"reasoning\"}}",
+    "data: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"signature_delta\",\"signature\":\"claude_sig_123\"}}",
+    "data: {\"type\":\"content_block_stop\",\"index\":0}",
+    "data: {\"type\":\"message_stop\"}"
+  ]
+}

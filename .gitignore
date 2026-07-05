@@ -1,0 +1,7 @@
+.omc
+logs
+target
+.ace-tool/
+.DS_Store
+.idea
+.vscode

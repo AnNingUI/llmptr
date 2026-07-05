@@ -1,0 +1,32 @@
+{
+  "name": "gemini_to_openai_chat_request_generation_go_golden",
+  "kind": "request",
+  "from": "gemini",
+  "to": "openai",
+  "model": "gpt-test",
+  "stream": true,
+  "compare_go": true,
+  "input": {
+    "generationConfig": {
+      "temperature": 0.4,
+      "maxOutputTokens": 128,
+      "topP": 0.8,
+      "topK": 16,
+      "stopSequences": ["END"],
+      "candidateCount": 2,
+      "thinkingConfig": {
+        "thinkingBudget": 8192
+      }
+    },
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Plan."
+          }
+        ]
+      }
+    ]
+  }
+}

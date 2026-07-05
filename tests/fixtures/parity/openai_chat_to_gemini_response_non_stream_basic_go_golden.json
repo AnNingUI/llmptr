@@ -1,0 +1,26 @@
+{
+  "name": "openai_chat_to_gemini_response_non_stream_basic_go_golden",
+  "kind": "response_non_stream",
+  "from": "openai",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {
+    "model": "gpt-test",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Hello from OpenAI"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5,
+      "completion_tokens": 3,
+      "total_tokens": 8
+    }
+  }
+}

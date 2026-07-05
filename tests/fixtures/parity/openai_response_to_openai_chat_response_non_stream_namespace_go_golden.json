@@ -1,0 +1,57 @@
+{
+  "name": "openai_chat_to_openai_response_response_non_stream_namespace_go_golden",
+  "kind": "response_non_stream",
+  "from": "openai",
+  "to": "openai-response",
+  "model": "deepseek-v4-flash",
+  "compare_go": true,
+  "original_request": {
+    "model": "deepseek-v4-flash",
+    "tools": [
+      {
+        "type": "namespace",
+        "name": "mcp__test_mcp__",
+        "tools": [
+          {
+            "type": "function",
+            "name": "add_numbers",
+            "parameters": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "translated_request": {
+    "model": "deepseek-v4-flash",
+    "messages": [],
+    "max_tokens": 64
+  },
+  "input": {
+    "id": "chatcmpl_namespace_nonstream",
+    "object": "chat.completion",
+    "created": 1773896263,
+    "model": "model",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "tool_calls": [
+            {
+              "id": "call_ns",
+              "type": "function",
+              "function": {
+                "name": "mcp__test_mcp__add_numbers",
+                "arguments": "{\"a\":3,\"b\":5}"
+              }
+            }
+          ]
+        },
+        "finish_reason": "tool_calls"
+      }
+    ]
+  }
+}

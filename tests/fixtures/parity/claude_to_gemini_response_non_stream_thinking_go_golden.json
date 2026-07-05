@@ -1,0 +1,44 @@
+{
+  "name": "claude_to_gemini_response_non_stream_thinking_go_golden",
+  "kind": "response_non_stream",
+  "from": "gemini",
+  "to": "claude",
+  "model": "gemini-test",
+  "compare_go": true,
+  "original_request": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Think"
+      }
+    ]
+  },
+  "translated_request": {},
+  "input": {
+    "responseId": "resp-thinking-ns",
+    "modelVersion": "gemini-test",
+    "candidates": [
+      {
+        "content": {
+          "role": "model",
+          "parts": [
+            {
+              "text": "hidden",
+              "thought": true
+            },
+            {
+              "text": "Visible"
+            }
+          ]
+        },
+        "finishReason": "STOP"
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 10,
+      "candidatesTokenCount": 3,
+      "thoughtsTokenCount": 2,
+      "totalTokenCount": 15
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "name": "openai_response_to_openai_chat_request_tool_reasoning_namespace_go_golden",
+  "kind": "request",
+  "from": "openai-response",
+  "to": "openai",
+  "model": "gpt-5.4",
+  "stream": true,
+  "compare_go": true,
+  "input": {
+    "instructions": "Be precise.",
+    "max_output_tokens": 123,
+    "parallel_tool_calls": true,
+    "reasoning": {
+      "effort": "HIGH"
+    },
+    "input": [
+      {
+        "type": "reasoning",
+        "summary": [
+          {
+            "type": "summary_text",
+            "text": "tool reasoning"
+          }
+        ]
+      },
+      {
+        "type": "function_call",
+        "call_id": "call_a",
+        "name": "mcp__test_mcp__add_numbers",
+        "arguments": "{\"a\":1,\"b\":2}"
+      },
+      {
+        "type": "message",
+        "role": "user",
+        "content": "defer until tool output"
+      },
+      {
+        "type": "function_call_output",
+        "call_id": "call_a",
+        "output": "{\"sum\":3}"
+      },
+      {
+        "role": "developer",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "developer note"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "input_image",
+            "image_url": "https://example.com/image.png",
+            "detail": "high"
+          }
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "type": "namespace",
+        "name": "mcp__test_mcp__",
+        "tools": [
+          {
+            "type": "function",
+            "name": "add_numbers",
+            "description": "Add two numbers",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "a": {
+                  "type": "number"
+                },
+                "b": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "a",
+                "b"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "tool_choice": {
+      "type": "function",
+      "function": {
+        "name": "mcp__test_mcp__add_numbers"
+      }
+    }
+  }
+}

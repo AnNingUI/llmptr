@@ -1,0 +1,17 @@
+{
+  "name": "openai_chat_to_claude_request_reasoning_go_golden",
+  "kind": "request",
+  "from": "openai",
+  "to": "claude",
+  "model": "claude-test",
+  "compare_go": true,
+  "input": {
+    "reasoning_effort": "high",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Think"
+      }
+    ]
+  }
+}

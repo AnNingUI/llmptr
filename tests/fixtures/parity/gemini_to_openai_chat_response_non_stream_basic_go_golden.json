@@ -1,0 +1,34 @@
+{
+  "name": "gemini_to_openai_chat_response_non_stream_basic_go_golden",
+  "kind": "response_non_stream",
+  "from": "gemini",
+  "to": "openai",
+  "model": "gpt-test",
+  "compare_go": true,
+  "input": {
+    "responseId": "resp-basic",
+    "modelVersion": "gemini-test",
+    "createTime": "2026-07-03T01:02:03Z",
+    "candidates": [
+      {
+        "index": 0,
+        "content": {
+          "role": "model",
+          "parts": [
+            {
+              "text": "Hello"
+            }
+          ]
+        },
+        "finishReason": "STOP"
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 10,
+      "candidatesTokenCount": 5,
+      "totalTokenCount": 15,
+      "thoughtsTokenCount": 2,
+      "cachedContentTokenCount": 3
+    }
+  }
+}

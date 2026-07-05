@@ -1,0 +1,54 @@
+{
+  "name": "openai_chat_to_gemini_response_stream_text_usage_go_golden",
+  "kind": "response_stream",
+  "from": "openai",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {},
+  "inputs": [
+    {
+      "model": "gpt-test",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": "Hel"
+          }
+        }
+      ]
+    },
+    {
+      "model": "gpt-test",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "content": "lo"
+          }
+        }
+      ]
+    },
+    {
+      "model": "gpt-test",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop"
+        }
+      ]
+    },
+    {
+      "model": "gpt-test",
+      "choices": [],
+      "usage": {
+        "prompt_tokens": 4,
+        "completion_tokens": 2,
+        "total_tokens": 6,
+        "completion_tokens_details": {
+          "reasoning_tokens": 1
+        }
+      }
+    }
+  ]
+}

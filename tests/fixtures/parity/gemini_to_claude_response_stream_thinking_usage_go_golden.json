@@ -1,0 +1,29 @@
+{
+  "name": "gemini_to_claude_response_stream_thinking_usage_go_golden",
+  "kind": "response_stream",
+  "from": "claude",
+  "to": "gemini",
+  "model": "claude-sonnet-4",
+  "compare_go": true,
+  "input": null,
+  "original_request": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Think"
+          }
+        ]
+      }
+    ]
+  },
+  "translated_request": {},
+  "inputs": [
+    "data: {\"type\":\"message_start\",\"message\":{\"id\":\"msg-thinking\",\"model\":\"claude-sonnet-4\"}}",
+    "data: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"hidden\"}}",
+    "data: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"answer\"}}",
+    "data: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"end_turn\",\"stop_sequence\":null},\"usage\":{\"input_tokens\":10,\"output_tokens\":5,\"thinking_tokens\":2}}",
+    "data: {\"type\":\"message_stop\"}"
+  ]
+}

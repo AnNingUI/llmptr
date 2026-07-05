@@ -1,0 +1,99 @@
+{
+  "name": "gemini_to_openai_chat_request_tools_go_golden",
+  "kind": "request",
+  "from": "gemini",
+  "to": "openai",
+  "model": "gpt-test",
+  "compare_go": true,
+  "input": {
+    "contents": [
+      {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "read_file",
+              "args": {
+                "path": "a.txt"
+              }
+            }
+          },
+          {
+            "functionCall": {
+              "name": "grep",
+              "args": {
+                "pattern": "needle"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "role": "function",
+        "parts": [
+          {
+            "functionResponse": {
+              "name": "read_file",
+              "response": {
+                "result": "a"
+              }
+            }
+          },
+          {
+            "functionResponse": {
+              "name": "grep",
+              "response": {
+                "content": {
+                  "matches": 1
+                }
+              }
+            }
+          },
+          {
+            "functionResponse": {
+              "name": "extra",
+              "response": {
+                "result": "fallback"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "functionDeclarations": [
+          {
+            "name": "read_file",
+            "description": "Read file",
+            "parameters": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          {
+            "name": "grep",
+            "description": "Search",
+            "parametersJsonSchema": {
+              "type": "object",
+              "properties": {
+                "pattern": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "toolConfig": {
+      "functionCallingConfig": {
+        "mode": "ANY"
+      }
+    }
+  }
+}

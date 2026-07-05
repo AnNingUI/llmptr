@@ -1,0 +1,12 @@
+{
+  "name": "gemini_to_claude_token_count_go_golden",
+  "kind": "token_count",
+  "from": "gemini",
+  "to": "claude",
+  "model": "claude-sonnet-4",
+  "compare_go": true,
+  "count": 17,
+  "input": {
+    "raw": true
+  }
+}

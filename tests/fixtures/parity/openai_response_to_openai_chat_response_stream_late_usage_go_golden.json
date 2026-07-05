@@ -1,0 +1,26 @@
+{
+  "name": "openai_chat_to_openai_response_response_stream_late_usage_go_golden",
+  "kind": "response_stream",
+  "from": "openai",
+  "to": "openai-response",
+  "model": "gpt-5.4",
+  "stream": true,
+  "compare_go": true,
+  "original_request": {
+    "model": "gpt-5.4",
+    "tool_choice": "auto",
+    "parallel_tool_calls": true
+  },
+  "translated_request": {
+    "model": "gpt-5.4",
+    "messages": [],
+    "stream": true
+  },
+  "inputs": [
+    "data: {\"id\":\"resp_late_usage\",\"object\":\"chat.completion.chunk\",\"created\":1773896263,\"model\":\"model\",\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"tool_calls\":[{\"index\":0,\"id\":\"call_late_usage\",\"type\":\"function\",\"function\":{\"name\":\"read\",\"arguments\":\"\"}}]},\"finish_reason\":null}]}",
+    "data: {\"id\":\"resp_late_usage\",\"object\":\"chat.completion.chunk\",\"created\":1773896263,\"model\":\"model\",\"choices\":[{\"index\":0,\"delta\":{\"tool_calls\":[{\"index\":0,\"function\":{\"arguments\":\"{\\\"filePath\\\":\\\"C:\\\\\\\\repo\\\\\\\\README.md\\\"}\"}}]},\"finish_reason\":\"tool_calls\"}]}",
+    "data: {\"id\":\"resp_late_usage\",\"object\":\"chat.completion.chunk\",\"created\":1773896263,\"model\":\"model\",\"choices\":[],\"usage\":{\"prompt_tokens\":11,\"completion_tokens\":7,\"total_tokens\":18}}",
+    "data: [DONE]"
+  ],
+  "input": "data: [DONE]"
+}

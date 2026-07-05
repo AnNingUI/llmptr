@@ -1,0 +1,51 @@
+{
+  "name": "gemini_to_openai_chat_response_non_stream_mixed_go_golden",
+  "kind": "response_non_stream",
+  "from": "gemini",
+  "to": "openai",
+  "model": "gpt-test",
+  "compare_go": true,
+  "original_request": {
+    "tools": [
+      {
+        "name": "get weather!"
+      }
+    ]
+  },
+  "input": {
+    "responseId": "resp-mixed",
+    "modelVersion": "gemini-test",
+    "candidates": [
+      {
+        "index": 0,
+        "content": {
+          "role": "model",
+          "parts": [
+            {
+              "thought": true,
+              "text": "Need weather."
+            },
+            {
+              "text": "Checking."
+            },
+            {
+              "inlineData": {
+                "mimeType": "image/png",
+                "data": "aW1n"
+              }
+            },
+            {
+              "functionCall": {
+                "name": "get_weather_",
+                "args": {
+                  "city": "Tokyo"
+                }
+              }
+            }
+          ]
+        },
+        "finishReason": "STOP"
+      }
+    ]
+  }
+}

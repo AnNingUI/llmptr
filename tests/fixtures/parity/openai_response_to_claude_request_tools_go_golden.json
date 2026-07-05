@@ -1,0 +1,73 @@
+{
+  "name": "openai_response_to_claude_request_tools_go_golden",
+  "kind": "request",
+  "from": "openai-response",
+  "to": "claude",
+  "model": "claude-test",
+  "stream": false,
+  "compare_go": true,
+  "input": {
+    "model": "gpt-client",
+    "input": [
+      {
+        "type": "function_call",
+        "call_id": "call.with space:1",
+        "name": "mcp__node_repl__js",
+        "arguments": "{\"code\":\"nodeRepl.write('ok')\"}"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "I'll run that."
+          }
+        ]
+      },
+      {
+        "type": "function_call_output",
+        "call_id": "call.with space:1",
+        "output": "ok"
+      }
+    ],
+    "tools": [
+      {
+        "type": "custom",
+        "name": "apply_patch",
+        "description": "Patch files"
+      },
+      {
+        "type": "namespace",
+        "name": "mcp__node_repl",
+        "tools": [
+          {
+            "type": "function",
+            "name": "js",
+            "parameters": {
+              "type": "object"
+            }
+          }
+        ]
+      },
+      {
+        "type": "web_search",
+        "name": "web_search",
+        "max_uses": 2,
+        "filters": {
+          "allowed_domains": ["example.com"]
+        }
+      },
+      {
+        "type": "file_search",
+        "name": "files"
+      }
+    ],
+    "tool_choice": {
+      "type": "function",
+      "function": {
+        "name": "js"
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "gemini_to_openai_chat_response_stream_tool_go_golden",
+  "kind": "response_stream",
+  "from": "gemini",
+  "to": "openai",
+  "model": "gpt-test",
+  "compare_go": true,
+  "original_request": {
+    "tools": [
+      {
+        "name": "get weather!"
+      }
+    ]
+  },
+  "input": {},
+  "inputs": [
+    {
+      "responseId": "resp-stream-tool",
+      "modelVersion": "gemini-test",
+      "candidates": [
+        {
+          "index": 0,
+          "content": {
+            "parts": [
+              {
+                "functionCall": {
+                  "name": "get_weather_",
+                  "args": {
+                    "city": "Tokyo"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "responseId": "resp-stream-tool",
+      "modelVersion": "gemini-test",
+      "candidates": [
+        {
+          "index": 0,
+          "content": {
+            "parts": [
+              {
+                "text": ""
+              }
+            ]
+          },
+          "finishReason": "STOP"
+        }
+      ],
+      "usageMetadata": {
+        "promptTokenCount": 8,
+        "candidatesTokenCount": 1,
+        "totalTokenCount": 9
+      }
+    }
+  ]
+}

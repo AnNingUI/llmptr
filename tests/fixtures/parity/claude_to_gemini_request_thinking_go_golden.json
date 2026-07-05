@@ -1,0 +1,20 @@
+{
+  "name": "claude_to_gemini_request_thinking_go_golden",
+  "kind": "request",
+  "from": "claude",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {
+    "thinking": {
+      "type": "enabled",
+      "budget_tokens": 1024
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "Think"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "claude_to_openai_chat_token_count_go_golden",
+  "kind": "token_count",
+  "from": "claude",
+  "to": "openai",
+  "model": "gpt-4.1",
+  "compare_go": true,
+  "count": 123,
+  "input": {}
+}

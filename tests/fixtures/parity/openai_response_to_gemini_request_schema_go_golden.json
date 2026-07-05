@@ -1,0 +1,36 @@
+{
+  "name": "openai_response_to_gemini_request_schema_go_golden",
+  "kind": "request",
+  "from": "openai-response",
+  "to": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "compare_go": true,
+  "input": {
+    "input": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "Return structured JSON."
+          }
+        ]
+      }
+    ],
+    "text": {
+      "format": {
+        "type": "json_schema",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "cleanedContent": {
+              "type": "string"
+            }
+          },
+          "required": ["cleanedContent"],
+          "additionalProperties": false
+        }
+      }
+    }
+  }
+}

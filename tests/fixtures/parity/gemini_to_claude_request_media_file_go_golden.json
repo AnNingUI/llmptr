@@ -1,0 +1,29 @@
+{
+  "name": "gemini_to_claude_request_media_file_go_golden",
+  "kind": "request",
+  "from": "gemini",
+  "to": "claude",
+  "model": "claude-sonnet-4",
+  "compare_go": true,
+  "input": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "inline_data": {
+              "mime_type": "image/png",
+              "data": "aGVsbG8="
+            }
+          },
+          {
+            "file_data": {
+              "mime_type": "application/pdf",
+              "file_uri": "gs://bucket/file.pdf"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

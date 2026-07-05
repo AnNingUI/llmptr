@@ -1,0 +1,19 @@
+{
+  "name": "gemini_to_openai_chat_response_stream_usage_go_golden",
+  "kind": "response_stream",
+  "from": "gemini",
+  "to": "openai",
+  "model": "gpt-test",
+  "compare_go": true,
+  "input": {
+    "responseId": "resp-usage",
+    "modelVersion": "gemini-test",
+    "usageMetadata": {
+      "promptTokenCount": 3,
+      "candidatesTokenCount": 2,
+      "totalTokenCount": 5,
+      "thoughtsTokenCount": 1,
+      "cachedContentTokenCount": 1
+    }
+  }
+}

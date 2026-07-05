@@ -1,0 +1,22 @@
+{
+  "name": "gemini_to_claude_response_stream_text_go_golden",
+  "kind": "response_stream",
+  "from": "claude",
+  "to": "gemini",
+  "model": "claude-sonnet-4",
+  "compare_go": true,
+  "original_request": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Hi"
+          }
+        ]
+      }
+    ]
+  },
+  "translated_request": {},
+  "input": "data: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"Hello\"}}"
+}

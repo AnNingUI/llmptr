@@ -1,0 +1,46 @@
+{
+  "name": "openai_response_to_gemini_request_messages_multimodal_go_golden",
+  "kind": "request",
+  "from": "openai-response",
+  "to": "gemini",
+  "model": "gemini-3.1-flash-lite",
+  "compare_go": true,
+  "input": {
+    "instructions": "Top instruction.",
+    "input": [
+      {
+        "type": "message",
+        "role": "developer",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "Developer instruction."
+          }
+        ]
+      },
+      {
+        "type": "message",
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "Look."
+          },
+          {
+            "type": "input_image",
+            "image_url": "data:image/png;base64,aW1n"
+          },
+          {
+            "type": "input_audio",
+            "format": "mp3",
+            "data": "YXVkaW8="
+          },
+          {
+            "type": "output_text",
+            "text": "model-side note"
+          }
+        ]
+      }
+    ]
+  }
+}

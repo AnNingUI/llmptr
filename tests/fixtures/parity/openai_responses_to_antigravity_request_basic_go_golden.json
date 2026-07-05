@@ -1,0 +1,1 @@
+{"name":"openai_responses_to_antigravity_request_basic_go_golden","kind":"request","from":"openai-response","to":"antigravity","model":"gemini-2.5-flash","stream":true,"compare_go":true,"input":{"input":[{"role":"user","content":"Hello"}],"model":"gpt-5.4"}}

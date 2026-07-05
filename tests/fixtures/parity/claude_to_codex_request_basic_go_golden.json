@@ -1,0 +1,18 @@
+{
+  "name": "claude_to_codex_request_basic_go_golden",
+  "kind": "request",
+  "from": "claude",
+  "to": "codex",
+  "model": "gpt-5-codex",
+  "stream": true,
+  "compare_go": true,
+  "input": {
+    "model": "claude-sonnet-4-20250514",
+    "max_tokens": 32000,
+    "messages": [
+      {"role": "user", "content": "Hello"}
+    ],
+    "stream": true,
+    "metadata": {"user_id": "user_test"}
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "openai_chat_to_gemini_response_stream_reasoning_go_golden",
+  "kind": "response_stream",
+  "from": "openai",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {},
+  "inputs": [
+    {
+      "model": "gpt-test",
+      "choices": [
+        {
+          "index": 0,
+          "delta": {
+            "reasoning_content": [
+              {
+                "text": "Think one."
+              },
+              "Think two."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "model": "gpt-test",
+      "choices": [
+        {
+          "index": 0,
+          "finish_reason": "stop"
+        }
+      ]
+    }
+  ]
+}

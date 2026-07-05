@@ -1,0 +1,48 @@
+{
+  "name": "claude_to_gemini_request_tool_result_go_golden",
+  "kind": "request",
+  "from": "claude",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "tool_use",
+            "id": "json-call-1",
+            "name": "json",
+            "input": {
+              "ok": true
+            }
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "tool_result",
+            "tool_use_id": "json-call-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "alpha"
+              },
+              {
+                "type": "image",
+                "source": {
+                  "type": "base64",
+                  "media_type": "image/png",
+                  "data": "aGVsbG8="
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

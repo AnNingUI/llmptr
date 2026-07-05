@@ -1,0 +1,30 @@
+{
+  "name": "openai_chat_to_gemini_request_reasoning_go_golden",
+  "kind": "request",
+  "from": "openai",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {
+    "reasoning_effort": "auto",
+    "messages": [
+      {
+        "role": "developer",
+        "content": [
+          {
+            "type": "text",
+            "text": "Use hidden reasoning."
+          },
+          {
+            "type": "text",
+            "text": "Return a short answer."
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Plan briefly."
+      }
+    ]
+  }
+}

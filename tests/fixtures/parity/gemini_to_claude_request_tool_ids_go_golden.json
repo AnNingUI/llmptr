@@ -1,0 +1,38 @@
+{
+  "name": "gemini_to_claude_request_tool_ids_go_golden",
+  "kind": "request",
+  "from": "gemini",
+  "to": "claude",
+  "model": "claude-sonnet-4",
+  "compare_go": true,
+  "input": {
+    "contents": [
+      {
+        "role": "model",
+        "parts": [
+          {
+            "functionCall": {
+              "name": "lookup",
+              "id": "call_gateway_id",
+              "args": {"query":"status"}
+            }
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "parts": [
+          {
+            "functionResponse": {
+              "name": "lookup",
+              "id": "call_gateway_id",
+              "response": {
+                "result": "ok"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "openai_chat_to_gemini_request_basic_go_golden",
+  "kind": "request",
+  "from": "openai",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are concise."
+      },
+      {
+        "role": "user",
+        "content": "Hello"
+      }
+    ],
+    "generationConfig": {
+      "stopSequences": ["END"]
+    },
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "top_k": 32,
+    "n": 2,
+    "modalities": ["text", "image"],
+    "image_config": {
+      "aspect_ratio": "1:1",
+      "image_size": "1024x1024"
+    }
+  }
+}

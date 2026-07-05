@@ -1,0 +1,50 @@
+{
+  "name": "claude_to_gemini_response_stream_text_go_golden",
+  "kind": "response_stream",
+  "from": "gemini",
+  "to": "claude",
+  "model": "gemini-test",
+  "compare_go": true,
+  "original_request": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi"
+      }
+    ]
+  },
+  "translated_request": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Hi"
+          }
+        ]
+      }
+    ]
+  },
+  "input": {
+    "responseId": "resp-test",
+    "modelVersion": "gemini-test",
+    "candidates": [
+      {
+        "content": {
+          "role": "model",
+          "parts": [
+            {
+              "text": "Hello"
+            }
+          ]
+        },
+        "finishReason": "STOP"
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 10,
+      "candidatesTokenCount": 5,
+      "totalTokenCount": 15
+    }
+  }
+}

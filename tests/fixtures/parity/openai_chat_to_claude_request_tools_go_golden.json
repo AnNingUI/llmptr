@@ -1,0 +1,55 @@
+{
+  "name": "openai_chat_to_claude_request_tools_go_golden",
+  "kind": "request",
+  "from": "openai",
+  "to": "claude",
+  "model": "claude-test",
+  "compare_go": true,
+  "input": {
+    "messages": [
+      {
+        "role": "assistant",
+        "content": "I'll call it.",
+        "tool_calls": [
+          {
+            "id": "call_weather",
+            "type": "function",
+            "function": {
+              "name": "get_weather",
+              "arguments": "{\"city\":\"Tokyo\"}"
+            }
+          }
+        ]
+      },
+      {
+        "role": "tool",
+        "tool_call_id": "call_weather",
+        "content": "sunny"
+      }
+    ],
+    "tools": [
+      {
+        "type": "function",
+        "function": {
+          "name": "get_weather",
+          "description": "Get weather",
+          "parameters": {
+            "type": "object",
+            "properties": {
+              "city": {
+                "type": "string"
+              }
+            },
+            "required": ["city"]
+          }
+        }
+      }
+    ],
+    "tool_choice": {
+      "type": "function",
+      "function": {
+        "name": "get_weather"
+      }
+    }
+  }
+}

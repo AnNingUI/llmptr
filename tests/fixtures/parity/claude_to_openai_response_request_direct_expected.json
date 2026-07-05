@@ -1,0 +1,137 @@
+{
+  "name": "claude_to_openai_response_request_direct_expected",
+  "kind": "request",
+  "from": "claude",
+  "to": "openai-response",
+  "model": "gpt-4.1",
+  "stream": true,
+  "input": {
+    "system": "Be brief.",
+    "max_tokens": 2048,
+    "temperature": 0.2,
+    "thinking": {
+      "type": "enabled",
+      "budget_tokens": 8192
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Read this"
+          },
+          {
+            "type": "image",
+            "source": {
+              "type": "url",
+              "url": "https://example.com/image.png"
+            }
+          }
+        ]
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "Need a lookup",
+            "signature": "claude_sig"
+          },
+          {
+            "type": "tool_use",
+            "id": "call_1",
+            "name": "search",
+            "input": {
+              "q": "rust"
+            }
+          },
+          {
+            "type": "text",
+            "text": "Done"
+          }
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "name": "search",
+        "description": "Search docs",
+        "input_schema": {
+          "type": "object"
+        }
+      }
+    ],
+    "tool_choice": {
+      "type": "tool",
+      "name": "search"
+    }
+  },
+  "expected": {
+    "model": "gpt-4.1",
+    "stream": true,
+    "instructions": "Be brief.",
+    "max_output_tokens": 2048,
+    "temperature": 0.2,
+    "reasoning": {
+      "effort": "medium"
+    },
+    "input": [
+      {
+        "type": "message",
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "Read this"
+          },
+          {
+            "type": "input_image",
+            "image_url": "https://example.com/image.png"
+          }
+        ]
+      },
+      {
+        "type": "reasoning",
+        "encrypted_content": "claude_sig",
+        "summary": [
+          {
+            "type": "summary_text",
+            "text": "Need a lookup"
+          }
+        ]
+      },
+      {
+        "type": "function_call",
+        "call_id": "call_1",
+        "name": "search",
+        "arguments": "{\"q\":\"rust\"}"
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "Done"
+          }
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "type": "function",
+        "name": "search",
+        "description": "Search docs",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      }
+    ],
+    "tool_choice": {
+      "type": "function",
+      "name": "search"
+    }
+  }
+}

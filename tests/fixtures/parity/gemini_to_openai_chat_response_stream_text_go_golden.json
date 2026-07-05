@@ -1,0 +1,50 @@
+{
+  "name": "gemini_to_openai_chat_response_stream_text_go_golden",
+  "kind": "response_stream",
+  "from": "gemini",
+  "to": "openai",
+  "model": "gpt-test",
+  "compare_go": true,
+  "input": {},
+  "inputs": [
+    {
+      "responseId": "resp-stream-text",
+      "modelVersion": "gemini-test",
+      "createTime": "2026-07-03T01:02:03Z",
+      "candidates": [
+        {
+          "index": 0,
+          "content": {
+            "parts": [
+              {
+                "text": "Hel"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "responseId": "resp-stream-text",
+      "modelVersion": "gemini-test",
+      "candidates": [
+        {
+          "index": 0,
+          "content": {
+            "parts": [
+              {
+                "text": "lo"
+              }
+            ]
+          },
+          "finishReason": "STOP"
+        }
+      ],
+      "usageMetadata": {
+        "promptTokenCount": 4,
+        "candidatesTokenCount": 2,
+        "totalTokenCount": 6
+      }
+    }
+  ]
+}

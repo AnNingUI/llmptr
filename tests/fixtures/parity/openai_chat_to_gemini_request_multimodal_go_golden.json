@@ -1,0 +1,47 @@
+{
+  "name": "openai_chat_to_gemini_request_multimodal_go_golden",
+  "kind": "request",
+  "from": "openai",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Inspect these inputs."
+          },
+          {
+            "type": "image_url",
+            "image_url": {
+              "url": "data:image/png;base64,aW1hZ2U="
+            }
+          },
+          {
+            "type": "video_url",
+            "video_url": {
+              "url": "data:video/mp4;base64,dmlkZW8="
+            }
+          },
+          {
+            "type": "file",
+            "file": {
+              "filename": "notes.txt",
+              "file_data": "bm90ZXM="
+            }
+          },
+          {
+            "type": "input_audio",
+            "input_audio": {
+              "format": "mp3",
+              "data": "YXVkaW8="
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

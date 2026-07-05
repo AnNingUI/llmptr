@@ -1,0 +1,67 @@
+{
+  "name": "claude_to_gemini_response_stream_tool_go_golden",
+  "kind": "response_stream",
+  "from": "gemini",
+  "to": "claude",
+  "model": "gemini-test",
+  "compare_go": true,
+  "original_request": {
+    "tools": [
+      {
+        "name": "get_weather",
+        "description": "Get weather",
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": "Weather?"
+      }
+    ]
+  },
+  "translated_request": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Weather?"
+          }
+        ]
+      }
+    ]
+  },
+  "input": {
+    "responseId": "resp-tool",
+    "modelVersion": "gemini-test",
+    "candidates": [
+      {
+        "content": {
+          "role": "model",
+          "parts": [
+            {
+              "functionCall": {
+                "name": "get_weather",
+                "args": {"city":"Tokyo"}
+              }
+            }
+          ]
+        },
+        "finishReason": "STOP"
+      }
+    ],
+    "usageMetadata": {
+      "promptTokenCount": 8,
+      "candidatesTokenCount": 1,
+      "totalTokenCount": 9
+    }
+  }
+}

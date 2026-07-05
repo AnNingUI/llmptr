@@ -1,0 +1,141 @@
+{
+  "name": "gemini_to_openai_response_response_stream_reasoning_text_tool_go_golden",
+  "kind": "response_stream",
+  "from": "openai-response",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {},
+  "original_request": {
+    "instructions": "Answer tersely",
+    "model": "gpt-5",
+    "max_output_tokens": 64,
+    "parallel_tool_calls": true,
+    "temperature": 0.4,
+    "metadata": {
+      "trace": "tm014"
+    },
+    "tools": [
+      {
+        "type": "function",
+        "name": "tool.with/slash",
+        "description": "Lookup"
+      }
+    ]
+  },
+  "translated_request": {},
+  "inputs": [
+    {
+      "response": {
+        "responseId": "req_stream_1",
+        "createTime": "2026-01-02T03:04:05Z",
+        "modelVersion": "gemini-3.5-flash",
+        "candidates": [
+          {
+            "content": {
+              "role": "model",
+              "parts": [
+                {
+                  "thought": true,
+                  "thoughtSignature": "sig_stream",
+                  "text": ""
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "traceId": "trace-1"
+    },
+    {
+      "response": {
+        "responseId": "req_stream_1",
+        "modelVersion": "gemini-3.5-flash",
+        "candidates": [
+          {
+            "content": {
+              "role": "model",
+              "parts": [
+                {
+                  "thought": true,
+                  "text": "plan"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "traceId": "trace-1"
+    },
+    {
+      "response": {
+        "responseId": "req_stream_1",
+        "modelVersion": "gemini-3.5-flash",
+        "candidates": [
+          {
+            "content": {
+              "role": "model",
+              "parts": [
+                {
+                  "text": "Hello"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "traceId": "trace-1"
+    },
+    {
+      "response": {
+        "responseId": "req_stream_1",
+        "modelVersion": "gemini-3.5-flash",
+        "candidates": [
+          {
+            "content": {
+              "role": "model",
+              "parts": [
+                {
+                  "functionCall": {
+                    "name": "tool.with_slash",
+                    "args": {
+                      "q": "rust"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "traceId": "trace-1"
+    },
+    {
+      "response": {
+        "responseId": "req_stream_1",
+        "modelVersion": "gemini-3.5-flash",
+        "candidates": [
+          {
+            "content": {
+              "role": "model",
+              "parts": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            "finishReason": "STOP"
+          }
+        ],
+        "usageMetadata": {
+          "promptTokenCount": 10,
+          "candidatesTokenCount": 5,
+          "thoughtsTokenCount": 2,
+          "totalTokenCount": 17,
+          "cachedContentTokenCount": 3
+        }
+      },
+      "traceId": "trace-1"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "claude_to_gemini_request_basic_go_golden",
+  "kind": "request",
+  "from": "claude",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {
+    "model": "claude-client",
+    "system": "You are helpful.",
+    "max_tokens": 100,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi"
+      }
+    ]
+  }
+}

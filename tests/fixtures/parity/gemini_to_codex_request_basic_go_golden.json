@@ -1,0 +1,1 @@
+{"name":"gemini_to_codex_request_basic_go_golden","kind":"request","from":"gemini","to":"codex","model":"gpt-5-codex","stream":true,"compare_go":true,"input":{"contents":[{"role":"user","parts":[{"text":"Hello"}]}],"generationConfig":{}}}

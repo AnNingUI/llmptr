@@ -1,0 +1,56 @@
+{
+  "name": "claude_to_openai_chat_request_tools_go_golden",
+  "kind": "request",
+  "from": "claude",
+  "to": "openai",
+  "model": "gpt-4.1",
+  "compare_go": true,
+  "input": {
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "I'll check."
+          },
+          {
+            "type": "tool_use",
+            "id": "toolu_weather",
+            "name": "get_weather",
+            "input": {"city":"Tokyo"}
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "tool_result",
+            "tool_use_id": "toolu_weather",
+            "content": "sunny"
+          }
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "name": "get_weather",
+        "description": "Get weather",
+        "input_schema": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string"
+            }
+          },
+          "required": ["city"]
+        }
+      }
+    ],
+    "tool_choice": {
+      "type": "tool",
+      "name": "get_weather"
+    }
+  }
+}

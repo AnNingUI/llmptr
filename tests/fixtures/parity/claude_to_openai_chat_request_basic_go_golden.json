@@ -1,0 +1,35 @@
+{
+  "name": "claude_to_openai_chat_request_basic_go_golden",
+  "kind": "request",
+  "from": "claude",
+  "to": "openai",
+  "model": "gpt-4.1",
+  "stream": true,
+  "compare_go": true,
+  "input": {
+    "system": "You are helpful.",
+    "max_tokens": 1024,
+    "temperature": 0.2,
+    "top_p": 0.9,
+    "stop_sequences": ["END"],
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Hello"
+          },
+          {
+            "type": "image",
+            "source": {
+              "type": "base64",
+              "media_type": "image/png",
+              "data": "aGVsbG8="
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

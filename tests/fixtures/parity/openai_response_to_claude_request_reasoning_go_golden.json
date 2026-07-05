@@ -1,0 +1,44 @@
+{
+  "name": "openai_response_to_claude_request_reasoning_go_golden",
+  "kind": "request",
+  "from": "openai-response",
+  "to": "claude",
+  "model": "claude-test",
+  "stream": false,
+  "compare_go": true,
+  "input": {
+    "model": "gpt-client",
+    "input": [
+      {
+        "type": "reasoning",
+        "encrypted_content": "EhkKFwgMEAIyEWNsYXVkZS1zb25uZXQtNC02GAE=",
+        "summary": [
+          {
+            "type": "summary_text",
+            "text": "internal reasoning"
+          }
+        ]
+      },
+      {
+        "type": "message",
+        "role": "assistant",
+        "content": [
+          {
+            "type": "output_text",
+            "text": "visible answer"
+          }
+        ]
+      },
+      {
+        "type": "message",
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "continue"
+          }
+        ]
+      }
+    ]
+  }
+}

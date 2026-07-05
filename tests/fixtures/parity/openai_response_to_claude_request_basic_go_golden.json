@@ -1,0 +1,29 @@
+{
+  "name": "openai_response_to_claude_request_basic_go_golden",
+  "kind": "request",
+  "from": "openai-response",
+  "to": "claude",
+  "model": "claude-test",
+  "stream": true,
+  "compare_go": true,
+  "input": {
+    "model": "gpt-client",
+    "instructions": "Be helpful.",
+    "max_output_tokens": 100,
+    "reasoning": {
+      "effort": "low"
+    },
+    "input": [
+      {
+        "type": "message",
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": "Hi"
+          }
+        ]
+      }
+    ]
+  }
+}

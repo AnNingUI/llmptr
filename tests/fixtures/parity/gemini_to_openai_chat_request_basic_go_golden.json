@@ -1,0 +1,27 @@
+{
+  "name": "gemini_to_openai_chat_request_basic_go_golden",
+  "kind": "request",
+  "from": "gemini",
+  "to": "openai",
+  "model": "gpt-test",
+  "compare_go": true,
+  "input": {
+    "systemInstruction": {
+      "parts": [
+        {
+          "text": "Be concise."
+        }
+      ]
+    },
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Hello"
+          }
+        ]
+      }
+    ]
+  }
+}

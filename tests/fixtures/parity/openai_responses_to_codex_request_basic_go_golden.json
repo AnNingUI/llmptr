@@ -1,0 +1,1 @@
+{"name":"openai_responses_to_codex_request_basic_go_golden","kind":"request","from":"openai-response","to":"codex","model":"gpt-5-codex","stream":true,"compare_go":true,"input":{"input":[{"role":"user","content":"Hello"}],"model":"gpt-5.4"}}

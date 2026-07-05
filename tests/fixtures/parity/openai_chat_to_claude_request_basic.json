@@ -1,0 +1,23 @@
+{
+  "name": "openai_chat_to_claude_request_basic",
+  "kind": "request",
+  "from": "openai",
+  "to": "claude",
+  "model": "claude-test",
+  "stream": false,
+  "compare_go": true,
+  "input": {
+    "model": "gpt-client",
+    "max_tokens": 100,
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are helpful."
+      },
+      {
+        "role": "user",
+        "content": "Hi"
+      }
+    ]
+  }
+}

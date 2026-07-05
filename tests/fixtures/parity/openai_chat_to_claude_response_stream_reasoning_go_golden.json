@@ -1,0 +1,24 @@
+{
+  "name": "openai_chat_to_claude_response_stream_reasoning_go_golden",
+  "kind": "response_stream",
+  "from": "claude",
+  "to": "openai",
+  "model": "claude-test",
+  "compare_go": true,
+  "input": null,
+  "original_request": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Think"
+      }
+    ]
+  },
+  "translated_request": {},
+  "inputs": [
+    "data: {\"type\":\"message_start\",\"message\":{\"id\":\"msg-stream-reason\",\"model\":\"claude-test\"}}",
+    "data: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"hidden\"}}",
+    "data: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"text_delta\",\"text\":\"answer\"}}",
+    "data: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"max_tokens\",\"stop_sequence\":null},\"usage\":{\"input_tokens\":11,\"output_tokens\":5,\"cache_read_input_tokens\":2}}"
+  ]
+}

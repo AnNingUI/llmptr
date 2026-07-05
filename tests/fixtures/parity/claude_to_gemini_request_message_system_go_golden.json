@@ -1,0 +1,40 @@
+{
+  "name": "claude_to_gemini_request_message_system_go_golden",
+  "kind": "request",
+  "from": "claude",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {
+    "system": [
+      {
+        "type": "text",
+        "text": "Top-level rules"
+      }
+    ],
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Hello"
+          }
+        ]
+      },
+      {
+        "role": "system",
+        "content": "String mid-conversation rule"
+      },
+      {
+        "role": "system",
+        "content": [
+          {
+            "type": "text",
+            "text": "Array mid-conversation rule"
+          }
+        ]
+      }
+    ]
+  }
+}

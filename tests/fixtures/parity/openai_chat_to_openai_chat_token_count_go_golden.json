@@ -1,0 +1,12 @@
+{
+  "name": "openai_chat_to_openai_chat_token_count_go_golden",
+  "kind": "token_count",
+  "from": "openai",
+  "to": "openai",
+  "model": "gpt-4",
+  "count": 12,
+  "compare_go": true,
+  "input": {
+    "raw": true
+  }
+}

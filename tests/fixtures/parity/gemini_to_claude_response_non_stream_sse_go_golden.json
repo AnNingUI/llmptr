@@ -1,0 +1,22 @@
+{
+  "name": "gemini_to_claude_response_non_stream_sse_go_golden",
+  "kind": "response_non_stream",
+  "from": "claude",
+  "to": "gemini",
+  "model": "claude-sonnet-4",
+  "compare_go": true,
+  "original_request": {
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "Hi"
+          }
+        ]
+      }
+    ]
+  },
+  "translated_request": {},
+  "input": "data: {\"type\":\"message_start\",\"message\":{\"id\":\"msg-test\",\"model\":\"claude-sonnet-4\"}}\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"Hello\"}}\ndata: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"end_turn\",\"stop_sequence\":null},\"usage\":{\"input_tokens\":10,\"output_tokens\":5}}"
+}

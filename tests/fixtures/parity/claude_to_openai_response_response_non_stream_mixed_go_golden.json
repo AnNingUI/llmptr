@@ -1,0 +1,30 @@
+{
+  "name": "claude_to_openai_response_response_non_stream_mixed_go_golden",
+  "kind": "response_non_stream",
+  "from": "claude",
+  "to": "openai-response",
+  "model": "claude-test",
+  "compare_go": true,
+  "original_request": {
+    "model": "gpt-test",
+    "tools": [
+      {
+        "type": "namespace",
+        "name": "mcp__node_repl",
+        "tools": [
+          {
+            "type": "function",
+            "name": "js",
+            "parameters": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        ]
+      }
+    ],
+    "temperature": 0.2
+  },
+  "translated_request": {},
+  "input": "data: {\"type\":\"message_start\",\"message\":{\"id\":\"msg_resp_nonstream\",\"usage\":{\"input_tokens\":13,\"output_tokens\":1,\"cache_read_input_tokens\":22000,\"cache_creation_input_tokens\":31}}}\ndata: {\"type\":\"content_block_start\",\"index\":0,\"content_block\":{\"type\":\"thinking\",\"thinking\":\"\"}}\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"thinking_delta\",\"thinking\":\"nonstream reasoning\"}}\ndata: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"signature_delta\",\"signature\":\"claude_sig_nonstream\"}}\ndata: {\"type\":\"content_block_stop\",\"index\":0}\ndata: {\"type\":\"content_block_start\",\"index\":1,\"content_block\":{\"type\":\"text\",\"text\":\"\"}}\ndata: {\"type\":\"content_block_delta\",\"index\":1,\"delta\":{\"type\":\"text_delta\",\"text\":\"Final answer\"}}\ndata: {\"type\":\"content_block_stop\",\"index\":1}\ndata: {\"type\":\"content_block_start\",\"index\":2,\"content_block\":{\"type\":\"tool_use\",\"id\":\"call_abc\",\"name\":\"mcp__node_repl__js\",\"input\":{}}}\ndata: {\"type\":\"content_block_delta\",\"index\":2,\"delta\":{\"type\":\"input_json_delta\",\"partial_json\":\"{\\\"code\\\":\\\"nodeRepl.write('hello')\\\"}\"}}\ndata: {\"type\":\"content_block_stop\",\"index\":2}\ndata: {\"type\":\"message_delta\",\"usage\":{\"output_tokens\":4}}\ndata: {\"type\":\"message_stop\"}"
+}

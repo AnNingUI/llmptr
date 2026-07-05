@@ -1,0 +1,47 @@
+{
+  "name": "gemini_to_openai_chat_request_multimodal_go_golden",
+  "kind": "request",
+  "from": "gemini",
+  "to": "openai",
+  "model": "gpt-test",
+  "compare_go": true,
+  "input": {
+    "system_instruction": {
+      "parts": [
+        {
+          "text": "Inspect images."
+        },
+        {
+          "inlineData": {
+            "mimeType": "image/png",
+            "data": "c3lz"
+          }
+        }
+      ]
+    },
+    "contents": [
+      {
+        "role": "user",
+        "parts": [
+          {
+            "text": "What is shown?"
+          },
+          {
+            "inlineData": {
+              "mimeType": "image/jpeg",
+              "data": "aW1n"
+            }
+          }
+        ]
+      },
+      {
+        "role": "model",
+        "parts": [
+          {
+            "text": "It is a sample."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "openai_chat_to_openai_chat_response_non_stream_go_golden",
+  "kind": "response_non_stream",
+  "from": "openai",
+  "to": "openai",
+  "model": "gpt-4",
+  "compare_go": true,
+  "input": {
+    "id": "chatcmpl_1",
+    "object": "chat.completion",
+    "model": "gpt-4",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Hi"
+        },
+        "finish_reason": "stop"
+      }
+    ]
+  }
+}

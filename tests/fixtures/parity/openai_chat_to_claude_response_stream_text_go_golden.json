@@ -1,0 +1,24 @@
+{
+  "name": "openai_chat_to_claude_response_stream_text_go_golden",
+  "kind": "response_stream",
+  "from": "claude",
+  "to": "openai",
+  "model": "claude-test",
+  "compare_go": true,
+  "input": null,
+  "original_request": {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hello"
+      }
+    ]
+  },
+  "translated_request": {},
+  "inputs": [
+    "data: {\"type\":\"message_start\",\"message\":{\"id\":\"msg-stream-text\",\"model\":\"claude-test\",\"usage\":{\"input_tokens\":10,\"output_tokens\":0}}}",
+    "data: {\"type\":\"content_block_delta\",\"index\":0,\"delta\":{\"type\":\"text_delta\",\"text\":\"Hello\"}}",
+    "data: {\"type\":\"message_delta\",\"delta\":{\"stop_reason\":\"end_turn\",\"stop_sequence\":null},\"usage\":{\"input_tokens\":10,\"output_tokens\":3}}",
+    "data: {\"type\":\"message_stop\"}"
+  ]
+}

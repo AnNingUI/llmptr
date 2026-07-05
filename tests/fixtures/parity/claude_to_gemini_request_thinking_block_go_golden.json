@@ -1,0 +1,26 @@
+{
+  "name": "claude_to_gemini_request_thinking_block_go_golden",
+  "kind": "request",
+  "from": "claude",
+  "to": "gemini",
+  "model": "gemini-test",
+  "compare_go": true,
+  "input": {
+    "messages": [
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "hidden",
+            "signature": "sig-history"
+          },
+          {
+            "type": "text",
+            "text": "Visible"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "openai_chat_to_claude_request_multimodal_go_golden",
+  "kind": "request",
+  "from": "openai",
+  "to": "claude",
+  "model": "claude-test",
+  "stream": true,
+  "compare_go": true,
+  "input": {
+    "max_tokens": 2048,
+    "top_p": 0.8,
+    "stop": ["END", "STOP"],
+    "messages": [
+      {
+        "role": "system",
+        "content": [
+          {
+            "type": "text",
+            "text": "System A"
+          },
+          {
+            "type": "text",
+            "text": "System B"
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "Describe"
+          },
+          {
+            "type": "image_url",
+            "image_url": {
+              "url": "data:image/png;base64,aGVsbG8="
+            }
+          },
+          {
+            "type": "file",
+            "file": {
+              "file_data": "data:application/pdf;base64,ZmFrZQ=="
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

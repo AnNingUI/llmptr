@@ -1,0 +1,72 @@
+﻿{
+    "name":  "gemini_to_openai_response_response_non_stream_mixed_go_golden",
+    "kind":  "response_non_stream",
+    "from":  "openai-response",
+    "to":  "gemini",
+    "model":  "gemini-test",
+    "compare_go":  true,
+    "original_request":  {
+                             "instructions":  "Answer tersely",
+                             "model":  "gpt-5",
+                             "max_output_tokens":  64,
+                             "temperature":  0.4,
+                             "metadata":  {
+                                              "trace":  "tm014"
+                                          },
+                             "tools":  [
+                                           {
+                                               "type":  "function",
+                                               "name":  "tool.with/slash",
+                                               "description":  "Lookup"
+                                           }
+                                       ]
+                         },
+    "translated_request":  {
+
+                           },
+    "input":  {
+                  "responseId":  "req_nonstream_1",
+                  "createTime":  "2026-01-02T03:04:05Z",
+                  "modelVersion":  "gemini-3.5-flash",
+                  "candidates":  [
+                                     {
+                                         "content":  {
+                                                         "role":  "model",
+                                                         "parts":  [
+                                                                       {
+                                                                           "thought":  true,
+                                                                           "thoughtSignature":  "sig_nonstream",
+                                                                           "text":  "think "
+                                                                       },
+                                                                       {
+                                                                           "thought":  true,
+                                                                           "text":  "more"
+                                                                       },
+                                                                       {
+                                                                           "text":  "Final "
+                                                                       },
+                                                                       {
+                                                                           "functionCall":  {
+                                                                                                "name":  "tool.with_slash",
+                                                                                                "args":  {
+                                                                                                             "q":  "rust"
+                                                                                                         }
+                                                                                            }
+                                                                       },
+                                                                       {
+                                                                           "text":  "answer"
+                                                                       }
+                                                                   ]
+                                                     },
+                                         "finishReason":  "STOP"
+                                     }
+                                 ],
+                  "usageMetadata":  {
+                                        "promptTokenCount":  10,
+                                        "candidatesTokenCount":  5,
+                                        "thoughtsTokenCount":  2,
+                                        "totalTokenCount":  17,
+                                        "cachedContentTokenCount":  3
+                                    }
+              }
+}
