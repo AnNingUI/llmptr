@@ -3,7 +3,7 @@
 //! and template defaults (instructions, stream, type:message).
 
 use serde_json::{Value, json};
-use translator_infra::util::{build_short_name_map, shorten_name_if_needed};
+use llmptr_infra::util::{build_short_name_map, shorten_name_if_needed};
 
 pub fn transform(model: &str, body: Value, stream: bool) -> Value {
     normalize(model, body, stream)

@@ -3,7 +3,7 @@
 use serde_json::{Value, json};
 use std::collections::HashMap;
 use std::sync::atomic::{AtomicU64, Ordering};
-use translator_infra::util;
+use llmptr_infra::util;
 
 #[derive(Debug, Default)]
 struct StreamState {

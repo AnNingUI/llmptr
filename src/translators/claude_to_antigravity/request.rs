@@ -9,7 +9,7 @@ use crate::translators::antigravity_web_search::{
 };
 use serde_json::{Value, json};
 use std::collections::HashMap;
-use translator_infra::util::{is_claude_attribution, sanitize_function_name};
+use llmptr_infra::util::{is_claude_attribution, sanitize_function_name};
 
 /// Convert a Claude Messages request to Antigravity (Gemini) API format.
 pub fn transform(model: &str, body: Value, _stream: bool) -> Value {

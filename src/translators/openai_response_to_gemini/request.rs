@@ -1,7 +1,7 @@
 //! OpenAI Responses -> Gemini request translation.
 
 use serde_json::{Value, json};
-use translator_infra::{
+use llmptr_infra::{
     signature::{self, SignatureBlockKind, SignatureProvider},
     util,
 };

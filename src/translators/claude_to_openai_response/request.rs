@@ -1,5 +1,5 @@
+use llmptr_infra::{thinking, util};
 use serde_json::{Value, json};
-use translator_infra::{thinking, util};
 
 /// Transform a Claude Messages request to the OpenAI Responses API format.
 ///

@@ -7,7 +7,7 @@ use crate::translators::antigravity_web_search;
 use serde_json::{Value, json};
 use std::collections::HashMap;
 use std::sync::atomic::{AtomicU64, Ordering};
-use translator_infra::signature;
+use llmptr_infra::signature;
 
 /// Response type state: 0=none, 1=content, 2=thinking, 3=function
 const RT_NONE: i32 = 0;

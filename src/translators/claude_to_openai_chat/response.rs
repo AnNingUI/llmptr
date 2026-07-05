@@ -5,7 +5,7 @@
 
 use serde_json::{Value, json};
 use std::collections::{BTreeMap, HashMap};
-use translator_infra::util;
+use llmptr_infra::util;
 
 /// State accumulated across streaming chunks.
 #[derive(Debug, Clone)]

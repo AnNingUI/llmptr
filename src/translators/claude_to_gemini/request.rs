@@ -3,7 +3,7 @@
 //! Maps Claude Messages format to Gemini generateContent format.
 
 use serde_json::{Value, json};
-use translator_infra::signature;
+use llmptr_infra::signature;
 
 /// Convert a Claude Messages request to Gemini generateContent format.
 pub fn transform(model: &str, body: Value, _stream: bool) -> Value {

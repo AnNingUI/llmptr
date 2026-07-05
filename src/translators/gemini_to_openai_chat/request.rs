@@ -2,7 +2,7 @@
 
 use serde_json::{Value, json};
 use std::sync::atomic::{AtomicU64, Ordering};
-use translator_infra::thinking;
+use llmptr_infra::thinking;
 
 static TOOL_CALL_COUNTER: AtomicU64 = AtomicU64::new(0);
 

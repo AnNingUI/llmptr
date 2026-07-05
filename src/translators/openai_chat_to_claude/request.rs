@@ -1,7 +1,7 @@
 //! OpenAI ChatCompletions -> Claude Messages request translation.
 
 use serde_json::{Value, json};
-use translator_infra::{thinking, util};
+use llmptr_infra::{thinking, util};
 
 pub fn transform(model: &str, body: Value, stream: bool) -> Value {
     let mut out = json!({

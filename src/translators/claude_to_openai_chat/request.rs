@@ -11,7 +11,7 @@
 //! - `max_tokens`, `temperature`, `top_p` → direct
 
 use serde_json::{Value, json};
-use translator_infra::thinking;
+use llmptr_infra::thinking;
 
 /// Convert a Claude Messages API request to OpenAI ChatCompletions format.
 pub fn transform(model: &str, body: Value, stream: bool) -> Value {

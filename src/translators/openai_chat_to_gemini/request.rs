@@ -1,6 +1,6 @@
 use serde_json::{Value, json};
 use std::collections::HashMap;
-use translator_infra::{
+use llmptr_infra::{
     signature::{self, SignatureBlockKind},
     util,
 };
